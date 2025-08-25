@@ -1,3 +1,5 @@
+
+
 const deleteBtn = document.querySelectorAll('.del')
 const movieItem = document.querySelectorAll('span.not')
 const movieComplete = document.querySelectorAll('span.completed')
@@ -32,6 +34,15 @@ async function deleteMovie(){
     }
 }
 
+// these are the funtions associated with the event listeners
+
+// 'movies/deleteMovie': this is a route
+
+// 'this.parentNode.dataset.id': So, here for this to delete to do function um we're grabbing what are we grabbing we're grabbing to-do id this dot parent node.dataset.id essentially what we're doing here is we're grabbing the unique database id value that we set in our ejs remember at the list item level 
+    // views/movies.ejs: data-id='<%=el._id%>: we set an id that was equal to the mongodb id of every single document that we passed to it 
+// 'this.parentNode.dataset.id':grabbing that again right we're going to the parent node we're grabbing the id of the item and we're passing that back up to our server
+
+
 async function markComplete(){
     const movieId = this.parentNode.dataset.id
     try{
@@ -50,6 +61,11 @@ async function markComplete(){
     }
 }
 
+// what does 'put' do?
+    // update
+// what are we updating?
+    // the boolean
+
 async function markIncomplete(){
     const movieId = this.parentNode.dataset.id
     try{
@@ -67,3 +83,5 @@ async function markIncomplete(){
         console.log(err)
     }
 }
+
+// public/js/main.js: we telling the brain of our application what to do

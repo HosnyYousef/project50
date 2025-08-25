@@ -8,3 +8,6 @@ h1{
 .not{
     text-decoration: underline;
 }
+
+/* going to pop into our css folder here look at it and it should become very apparent what's happening so if something has a class of completed it gets a text decoration of line to line through and a color of gray if it's not complete it gets a text decoration of underline so very simple css just two classes and that's all we need yep exactly louise codes it changes your css yep okay */
+

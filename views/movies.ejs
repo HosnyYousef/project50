@@ -13,6 +13,7 @@
     <% movies.forEach( el => { %>
             <li class='movieItem' data-id='<%=el._id%>'>
                 <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.movie %></span>
+<!-- it's checking to see if that specific list item so that to-do task has a completed value of true if it is it gives it a class of completed if it's not it gives it a class of not -->
                 <span class='del'> Delete </span>
             </li>
     <% }) %>    
@@ -30,3 +31,5 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+
+<!-- Really all of all our views are doing is they're rendering some stuff from the database and they're sending a bunch of routes up to the server right they're sending a bunch of routes up to the server and the server is handling the thinking -->

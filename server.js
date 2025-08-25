@@ -7,6 +7,7 @@ const MongoStore = require('connect-mongo')(session)
 const flash = require('express-flash')
 const logger = require('morgan')
 const connectDB = require('./config/database')
+// connectDB: method to help connect to the database?
 const mainRoutes = require('./routes/main')
 const movieRoutes = require('./routes/movies')
 
@@ -40,7 +41,7 @@ app.use(
 app.use(passport.initialize())
 app.use(passport.session())
 // ^^^these are just saying "Hey, we're going to use passport"
-
+// help us with authentications
 app.use(flash())
   
 app.use('/', mainRoutes)

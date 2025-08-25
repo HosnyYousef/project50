@@ -19,4 +19,6 @@ router.put('/markIncomplete', moviesController.markIncomplete)
 
 router.delete('/deleteMovie', moviesController.deleteMovie)
 
+// routes points to diffrent methods, send to the correct route folder
+
 module.exports = router
